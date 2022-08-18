@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Dragabble</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        #Div,
+        #Div1,
+        #Div2,
+        #Div3,
+        #Div4,
+        #Div5 {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            background: skyblue;
+            color: white;
+            font-size: large;
+            font-weight: bold
+        }
+
+        #Div6 {
+            width: 800px;
+            height: 200px;
+            padding: 10px;
+            background: gray;
+            color: #ffffff;
+            font-size: large;
+            font-weight: bold
+        }
+
+        #Div1,
+        #Div2,
+        #Div3,
+        #Div6,
+        #Div5 {
+            border: solid 3px #000000;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Div").draggable();
+
+            $("#Div1 span").draggable({
+                containment: "#Div1"
+            });
+
+            $("#Div2 span").draggable({
+                axis: "x"
+            });
+
+            $("#Div3 span").draggable({
+                axis: "y"
+            });
+
+
+            $("#Div6 span").draggable({
+                distance: 200
+            });
+
+            $("#Div5 span").draggable({
+                delay: 5000
+            });
+
+        });
+    </script>
+
+    </head>
+
+    <body>
+
+        <div id="Div">
+            <p>Dell</p>
+        </div>
+
+        <hr />
+
+        <div id="Div1">
+            <span>Within Only</span><br /><br />
+        </div>
+
+        <hr />
+
+        <div id="Div2">
+            <span>Can Move Only Horizontaly</span><br /><br />
+        </div>
+
+        <hr />
+
+        <div id="Div3">
+            <span>Can Move Only Verticaly</span><br /><br />
+        </div>
+
+        <hr />
+
+        <div id="Div5">
+            <span>Can Move Only After 5 Seconds</span>
+        </div>
+        </div>
+
+        <hr />
+
+        <div id="Div6">
+            <span>Can Move Only After 200 PX</span><br /><br />
+        </div>
+
+        <hr />
+
+    </body>
+
+</html>
+
+
+</body>
+
+</html>
